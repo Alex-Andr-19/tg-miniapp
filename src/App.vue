@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-
-function createLink(route: string): string {
-  return import.meta.env.BASE_URL + route.slice(1, route.length);
-}
 </script>
 
 <template>
@@ -15,8 +11,8 @@ function createLink(route: string): string {
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink :to="createLink('/')">Home</RouterLink>
-        <RouterLink :to="createLink('/about')">About</RouterLink>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
   </header>
