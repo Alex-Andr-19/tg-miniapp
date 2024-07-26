@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "deploy": "vite build && gh-pages -d dist",
+
+    "postbuild": "node copy-404.js",
+    "deploy": "vite build && npm run postbuild && gh-pages -d dist",
     "deploy-only": "gh-pages -d dist"
   },
   "dependencies": {
