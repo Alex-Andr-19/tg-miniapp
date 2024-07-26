@@ -10,6 +10,7 @@ const publicDir: { publicDir?: string } = {};
 if (process.env.NODE_ENV !== "development") {
   publicDir.publicDir = "/tg-miniapp/";
 }
+console.log(publicDir);
 
 // https://vitejs.dev/config/
 export default defineConfig({
