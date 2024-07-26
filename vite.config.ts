@@ -6,11 +6,11 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 console.log(process.env.NODE_ENV);
 
-const publicDir: { publicDir?: string } = {};
+const base: { base?: string } = {};
 if (process.env.NODE_ENV !== "development") {
-  publicDir.publicDir = "/tg-miniapp/";
+  base.base = "/tg-miniapp/";
 }
-console.log(publicDir);
+console.log(base);
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,7 +18,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  ...publicDir,
+  ...base,
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
