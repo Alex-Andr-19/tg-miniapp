@@ -1,14 +1,16 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig } from 'vite'
+import { defineConfig, UserConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
 console.log(process.env.NODE_ENV);
 
-const base: { base?: string } = {};
+const base: UserConfig = {};
 if (process.env.NODE_ENV !== "development") {
+  base.root = "/tg-miniapp/";
   base.base = "/tg-miniapp/";
+  base.publicDir = "/tg-miniapp/";
 }
 console.log(base);
 
