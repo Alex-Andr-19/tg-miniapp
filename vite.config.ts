@@ -8,7 +8,7 @@ console.log(process.env.NODE_ENV);
 
 const base: UserConfig = {};
 if (process.env.NODE_ENV !== "development") {
-  base.root = "/tg-miniapp/";
+  // base.root = "/tg-miniapp/";
   base.base = "/tg-miniapp/";
   base.publicDir = "/tg-miniapp/";
 }
