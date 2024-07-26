@@ -1,0 +1,12 @@
+ApprovalRules:
+  - FourEyesRule:
+      mitoch:
+        - "*"
+      count: 1
+
+BranchGroups:
+  - Master:
+      branches:        
+        - master
+      rules:
+        - FourEyesRule
