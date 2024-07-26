@@ -6,9 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 const base: UserConfig = {};
 if (process.env.NODE_ENV !== "development") {
-  // base.root = "/tg-miniapp/";
   base.base = "/tg-miniapp/";
-  base.publicDir = "/tg-miniapp/";
 }
 
 // https://vitejs.dev/config/

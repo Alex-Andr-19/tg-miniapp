@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 
 function createLink(route: string): string {
-  return import.meta.env.BASE_URL + route;
+  return import.meta.env.BASE_URL + route.slice(1, route.length);
 }
 </script>
 
